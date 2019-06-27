@@ -10,7 +10,7 @@ import (
 	"log"
 	"os"
 
-	"gopl.io/ch4/github"
+	"github.com/daniruizcamacho/gopl.io/ch4/github"
 )
 
 //!+template

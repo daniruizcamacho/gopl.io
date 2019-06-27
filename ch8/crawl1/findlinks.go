@@ -16,7 +16,7 @@ import (
 	"log"
 	"os"
 
-	"gopl.io/ch5/links"
+	"github.com/daniruizcamacho/gopl.io/ch5/links"
 )
 
 //!+crawl
