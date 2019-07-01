@@ -24,10 +24,10 @@ const (
 
 func (c Celsius) String() string    { return fmt.Sprintf("%g°C", c) }
 func (f Fahrenheit) String() string { return fmt.Sprintf("%g°F", f) }
-func (k Kelvin) String() string     { return fmt.Sprintf("%g°F", k) }
-func (f Feets) String() string      { return fmt.Sprintf("%g°F", f) }
-func (m Meters) String() string     { return fmt.Sprintf("%g°F", m) }
-func (p Pounds) String() string     { return fmt.Sprintf("%g°F", p) }
-func (k Kilograms) String() string  { return fmt.Sprintf("%g°F", k) }
+func (k Kelvin) String() string     { return fmt.Sprintf("%g°K", k) }
+func (f Feets) String() string      { return fmt.Sprintf("%gF", f) }
+func (m Meters) String() string     { return fmt.Sprintf("%gM", m) }
+func (p Pounds) String() string     { return fmt.Sprintf("%gP", p) }
+func (k Kilograms) String() string  { return fmt.Sprintf("%gK", k) }
 
 //!-

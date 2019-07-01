@@ -17,15 +17,24 @@ import (
 
 func main() {
 	for _, arg := range os.Args[1:] {
-		t, err := strconv.ParseFloat(arg, 64)
+		v, err := strconv.ParseFloat(arg, 64)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "cf: %v\n", err)
 			os.Exit(1)
 		}
-		f := tempconv.Fahrenheit(t)
-		c := tempconv.Celsius(t)
+		fahrenheit := tempconv.Fahrenheit(v)
+		celsius := tempconv.Celsius(v)
+		feets := tempconv.Feets(v)
+		meters := tempconv.Meters(v)
+		pounds := tempconv.Pounds(v)
+		kilograms := tempconv.Kilograms(v)
+
 		fmt.Printf("%s = %s, %s = %s\n",
-			f, tempconv.FToC(f), c, tempconv.CToF(c))
+			fahrenheit, tempconv.FToC(fahrenheit), celsius, tempconv.CToF(celsius))
+		fmt.Printf("%s = %s, %s = %s\n",
+			feets, tempconv.FToM(feets), meters, tempconv.MToF(meters))
+		fmt.Printf("%s = %s, %s = %s\n",
+			pounds, tempconv.PToK(pounds), kilograms, tempconv.KToP(kilograms))
 	}
 }
 
