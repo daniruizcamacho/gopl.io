@@ -5,7 +5,7 @@
 
 // (Package doc comment intentionally malformed to demonstrate golint.)
 //!+
-package popcountexercise
+package popcountexercise25
 
 // pc[i] is the population count of i.
 var pc [256]byte
@@ -22,7 +22,7 @@ func PopCount(x uint64) int {
 	var index uint
 
 	for index = 0; index < 8; index++ {
-		numberOfBits += int(pc[byte(x>>(index*8))])
+		numberOfBits += int(pc[byte(x&(x-1))])
 	}
 
 	return numberOfBits

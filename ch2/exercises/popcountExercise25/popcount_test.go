@@ -1,12 +1,12 @@
 // Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-package popcountexercise_test
+package popcountexercise25_test
 
 import (
 	"testing"
 
-	"github.com/daniruizcamacho/gopl.io/ch2/popcount"
+	"github.com/daniruizcamacho/gopl.io/ch2/exercises/popcountExercise25"
 )
 
 // -- Alternative implementations --
@@ -45,7 +45,7 @@ func PopCountByShifting(x uint64) int {
 
 func BenchmarkPopCount(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		popcount.PopCount(0x1234567890ABCDEF)
+		popcountexercise25.PopCount(0x1234567890ABCDEF)
 	}
 }
 
